@@ -1,2 +1,371 @@
 
 # cargo-vet imports lock
+
+[[audits.google.audits.aho-corasick]]
+who = "Ying Hsu <yinghsu@chromium.org>"
+criteria = "safe-to-run"
+version = "1.1.3"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
+[[audits.google.audits.bitflags]]
+who = "Lukasz Anforowicz <lukasza@chromium.org>"
+criteria = "safe-to-deploy"
+version = "2.4.2"
+notes = """
+Audit notes:
+
+* I've checked for any discussion in Google-internal cl/546819168 (where audit
+  of version 2.3.3 happened)
+* `src/lib.rs` contains `#![cfg_attr(not(test), forbid(unsafe_code))]`
+* There are 2 cases of `unsafe` in `src/external.rs` but they seem to be
+  correct in a straightforward way - they just propagate the marker trait's
+  impl (e.g. `impl bytemuck::Pod`) from the inner to the outer type
+* Additional discussion and/or notes may be found in https://crrev.com/c/5238056
+"""
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.google.audits.bitflags]]
+who = "Adrian Taylor <adetaylor@chromium.org>"
+criteria = "safe-to-deploy"
+delta = "2.4.2 -> 2.5.0"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.google.audits.bitflags]]
+who = "Adrian Taylor <adetaylor@chromium.org>"
+criteria = "safe-to-deploy"
+delta = "2.5.0 -> 2.6.0"
+notes = "The changes from the previous version are negligible and thus it retains the same properties."
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.google.audits.equivalent]]
+who = "George Burgess IV <gbiv@google.com>"
+criteria = "safe-to-deploy"
+version = "1.0.1"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
+[[audits.google.audits.futures-channel]]
+who = "George Burgess IV <gbiv@google.com>"
+criteria = "safe-to-run"
+version = "0.3.28"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
+[[audits.google.audits.futures-channel]]
+who = "George Burgess IV <gbiv@google.com>"
+criteria = "safe-to-run"
+delta = "0.3.28 -> 0.3.31"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
+[[audits.google.audits.futures-core]]
+who = "George Burgess IV <gbiv@google.com>"
+criteria = "safe-to-run"
+version = "0.3.28"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
+[[audits.google.audits.futures-core]]
+who = "George Burgess IV <gbiv@google.com>"
+criteria = "safe-to-run"
+delta = "0.3.28 -> 0.3.31"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
+[[audits.google.audits.futures-io]]
+who = "George Burgess IV <gbiv@google.com>"
+criteria = "safe-to-run"
+version = "0.3.28"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
+[[audits.google.audits.futures-io]]
+who = "George Burgess IV <gbiv@google.com>"
+criteria = "safe-to-run"
+delta = "0.3.28 -> 0.3.31"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
+[[audits.google.audits.futures-macro]]
+who = "George Burgess IV <gbiv@google.com>"
+criteria = "safe-to-run"
+version = "0.3.28"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
+[[audits.google.audits.futures-macro]]
+who = "George Burgess IV <gbiv@google.com>"
+criteria = "safe-to-run"
+delta = "0.3.28 -> 0.3.31"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
+[[audits.google.audits.futures-task]]
+who = "George Burgess IV <gbiv@google.com>"
+criteria = "safe-to-run"
+version = "0.3.28"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
+[[audits.google.audits.futures-task]]
+who = "George Burgess IV <gbiv@google.com>"
+criteria = "safe-to-run"
+delta = "0.3.28 -> 0.3.31"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
+[[audits.google.audits.futures-util]]
+who = "George Burgess IV <gbiv@google.com>"
+criteria = "safe-to-run"
+version = "0.3.28"
+notes = """
+There's a custom xorshift-based `random::shuffle` implementation in
+src/async_await/random.rs. This is `doc(hidden)` and seems to exist just so
+that `futures-macro::select` can be unbiased. Sicne xorshift is explicitly not
+intended to be a cryptographically secure algorithm, it is not considered
+crypto.
+"""
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
+[[audits.google.audits.futures-util]]
+who = "George Burgess IV <gbiv@google.com>"
+criteria = "safe-to-run"
+delta = "0.3.28 -> 0.3.31"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
+[[audits.google.audits.heck]]
+who = "Ying Hsu <yinghsu@chromium.org>"
+criteria = "safe-to-run"
+version = "0.5.0"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
+[[audits.google.audits.lazy_static]]
+who = "Android Legacy"
+criteria = "safe-to-run"
+version = "1.4.0"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
+[[audits.google.audits.lazy_static]]
+who = "Lukasz Anforowicz <lukasza@chromium.org>"
+criteria = "safe-to-deploy"
+delta = "1.4.0 -> 1.5.0"
+notes = "Unsafe review notes: https://crrev.com/c/5650836"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.google.audits.pin-utils]]
+who = "Android Legacy"
+criteria = "safe-to-run"
+version = "0.1.0"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
+[[audits.google.audits.proc-macro2]]
+who = "Ying Hsu <yinghsu@chromium.org>"
+criteria = "safe-to-run"
+version = "1.0.79"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
+[[audits.google.audits.proc-macro2]]
+who = "Hung-Hsien Chen <hunghsienchen@chromium.org>"
+criteria = "safe-to-run"
+delta = "1.0.79 -> 1.0.86"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
+[[audits.google.audits.proc-macro2]]
+who = "danakj <danakj@chromium.org>"
+criteria = "safe-to-deploy"
+delta = "1.0.86 -> 1.0.87"
+notes = "No new unsafe interactions."
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.google.audits.proc-macro2]]
+who = "Liza Burakova <liza@chromium.org"
+criteria = "safe-to-deploy"
+delta = "1.0.87 -> 1.0.89"
+notes = """
+Biggest change is adding error handling in build.rs.
+Some config related changes in wrapper.rs.
+"""
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.google.audits.quote]]
+who = "Ying Hsu <yinghsu@chromium.org>"
+criteria = "safe-to-run"
+version = "1.0.36"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
+[[audits.google.audits.quote]]
+who = "Lukasz Anforowicz <lukasza@chromium.org>"
+criteria = "safe-to-deploy"
+delta = "1.0.36 -> 1.0.37"
+notes = """
+The delta just 1) inlines/expands `impl ToTokens` that used to be handled via
+`primitive!` macro and 2) adds `impl ToTokens` for `CStr` and `CString`.
+"""
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.google.audits.regex]]
+who = "Ying Hsu <yinghsu@chromium.org>"
+criteria = "safe-to-run"
+version = "1.10.4"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
+[[audits.google.audits.regex]]
+who = "Adrian Taylor <adetaylor@chromium.org>"
+criteria = "safe-to-run"
+delta = "1.10.4 -> 1.10.5"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.google.audits.regex]]
+who = "Lukasz Anforowicz <lukasza@chromium.org>"
+criteria = "safe-to-run"
+delta = "1.10.5 -> 1.10.6"
+notes = "The delta has minimal changes in `pattern.rs`."
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.google.audits.regex]]
+who = "Lukasz Anforowicz <lukasza@chromium.org>"
+criteria = "safe-to-run"
+delta = "1.10.6 -> 1.11.0"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.google.audits.regex]]
+who = "Liza Burakova <liza@chromium.org>"
+criteria = "safe-to-run"
+delta = "1.11.0 -> 1.11.1"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.google.audits.regex-automata]]
+who = "Ying Hsu <yinghsu@chromium.org>"
+criteria = "safe-to-run"
+version = "0.4.6"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
+[[audits.google.audits.regex-automata]]
+who = "Adrian Taylor <adetaylor@chromium.org>"
+criteria = "safe-to-run"
+delta = "0.4.6 -> 0.4.7"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.google.audits.regex-automata]]
+who = "Lukasz Anforowicz <lukasza@chromium.org>"
+criteria = "safe-to-run"
+delta = "0.4.7 -> 0.4.8"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.google.audits.regex-syntax]]
+who = "Ying Hsu <yinghsu@chromium.org>"
+criteria = "safe-to-run"
+version = "0.8.3"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
+[[audits.google.audits.regex-syntax]]
+who = "Adrian Taylor <adetaylor@chromium.org>"
+criteria = "safe-to-run"
+delta = "0.8.3 -> 0.8.4"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.google.audits.regex-syntax]]
+who = "Lukasz Anforowicz <lukasza@chromium.org>"
+criteria = "safe-to-run"
+delta = "0.8.4 -> 0.8.5"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.google.audits.rustc_version]]
+who = "danakj@chromium.org"
+criteria = "safe-to-run"
+version = "0.4.0"
+notes = """
+Reviewed in https://crrev.com/c/5171063
+
+Previously reviewed during security review and the audit is grandparented in.
+"""
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.google.audits.rustc_version]]
+who = "danakj <danakj@chromium.org>"
+criteria = "safe-to-run"
+delta = "0.4.0 -> 0.4.1"
+notes = "No unsafe, net or fs."
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.google.audits.semver]]
+who = "danakj@chromium.org"
+criteria = "safe-to-run"
+version = "1.0.20"
+notes = """
+Reviewed in https://crrev.com/c/5171063
+
+Previously reviewed during security review and the audit is grandparented in.
+"""
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.google.audits.semver]]
+who = "Lukasz Anforowicz <lukasza@chromium.org>"
+criteria = "safe-to-run"
+delta = "1.0.20 -> 1.0.21"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.google.audits.semver]]
+who = "Lukasz Anforowicz <lukasza@chromium.org>"
+criteria = "safe-to-run"
+delta = "1.0.21 -> 1.0.22"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.google.audits.semver]]
+who = "danakj <danakj@chromium.org>"
+criteria = "safe-to-run"
+delta = "1.0.22 -> 1.0.23"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.google.audits.shlex]]
+who = "George Burgess IV <gbiv@google.com>"
+criteria = "safe-to-run"
+version = "1.1.0"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
+[[audits.google.audits.shlex]]
+who = "Daniel Verkamp <dverkamp@chromium.org>"
+criteria = "safe-to-run"
+delta = "1.1.0 -> 1.3.0"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
+[[audits.google.audits.toml]]
+who = "George Burgess IV <gbiv@google.com>"
+criteria = "safe-to-run"
+version = "0.5.10"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
+[[audits.google.audits.toml]]
+who = "Hung-Hsien Chen <hunghsienchen@chromium.org>"
+criteria = "safe-to-run"
+delta = "0.5.10 -> 0.8.19"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
+[[audits.google.audits.toml_datetime]]
+who = "Hung-Hsien Chen <hunghsienchen@chromium.org>"
+criteria = "safe-to-run"
+version = "0.6.8"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
+[[audits.google.audits.unicode-ident]]
+who = "Lukasz Anforowicz <lukasza@chromium.org>"
+criteria = "safe-to-deploy"
+version = "1.0.12"
+notes = '''
+I grepped for \"crypt\", \"cipher\", \"fs\", \"net\" - there were no hits.
+
+All two functions from the public API of this crate use `unsafe` to avoid bound
+checks for an array access.  Cross-module analysis shows that the offsets can
+be statically proven to be within array bounds.  More details can be found in
+the unsafe review CL at https://crrev.com/c/5350386.
+
+This crate has been added to Chromium in https://crrev.com/c/3891618.
+'''
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.google.audits.unicode-ident]]
+who = "Dustin J. Mitchell <djmitche@chromium.org>"
+criteria = "safe-to-deploy"
+delta = "1.0.12 -> 1.0.13"
+notes = "Lots of table updates, and tables are assumed correct with unsafe `.get_unchecked()`, so ub-risk-2 is appropriate"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.google.audits.winapi]]
+who = "danakj@chromium.org"
+criteria = "safe-to-run"
+version = "0.3.9"
+notes = """
+Reviewed in https://crrev.com/c/5171063
+
+Previously reviewed during security review and the audit is grandparented in.
+"""
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"

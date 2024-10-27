@@ -4,20 +4,15 @@
 [cargo-vet]
 version = "0.10"
 
+[imports.google]
+url = "https://raw.githubusercontent.com/google/supply-chain/main/audits.toml"
+
 [policy.gtk-rs-audit]
 criteria = "safe-to-run"
 notes = "For desktop applications with little no to external exposure safe-to-run should usally be sufficient."
 
-[[exemptions.aho-corasick]]
-version = "1.1.3"
-criteria = "safe-to-run"
-
 [[exemptions.autocfg]]
 version = "1.4.0"
-criteria = "safe-to-run"
-
-[[exemptions.bitflags]]
-version = "2.6.0"
 criteria = "safe-to-run"
 
 [[exemptions.block]]
@@ -44,39 +39,11 @@ criteria = "safe-to-run"
 version = "0.17.0"
 criteria = "safe-to-run"
 
-[[exemptions.equivalent]]
-version = "1.0.1"
-criteria = "safe-to-run"
-
 [[exemptions.field-offset]]
 version = "0.3.6"
 criteria = "safe-to-run"
 
-[[exemptions.futures-channel]]
-version = "0.3.31"
-criteria = "safe-to-run"
-
-[[exemptions.futures-core]]
-version = "0.3.31"
-criteria = "safe-to-run"
-
 [[exemptions.futures-executor]]
-version = "0.3.31"
-criteria = "safe-to-run"
-
-[[exemptions.futures-io]]
-version = "0.3.31"
-criteria = "safe-to-run"
-
-[[exemptions.futures-macro]]
-version = "0.3.31"
-criteria = "safe-to-run"
-
-[[exemptions.futures-task]]
-version = "0.3.31"
-criteria = "safe-to-run"
-
-[[exemptions.futures-util]]
 version = "0.3.31"
 criteria = "safe-to-run"
 
@@ -194,16 +161,8 @@ notes = "Do not audit gtk-rs itself, but just its dependencies"
 version = "0.15.0"
 criteria = "safe-to-run"
 
-[[exemptions.heck]]
-version = "0.5.0"
-criteria = "safe-to-run"
-
 [[exemptions.indexmap]]
 version = "2.6.0"
-criteria = "safe-to-run"
-
-[[exemptions.lazy_static]]
-version = "1.5.0"
 criteria = "safe-to-run"
 
 [[exemptions.libadwaita]]
@@ -266,44 +225,12 @@ notes = "Do not audit gtk-rs itself, but just its dependencies"
 version = "0.2.15"
 criteria = "safe-to-run"
 
-[[exemptions.pin-utils]]
-version = "0.1.0"
-criteria = "safe-to-run"
-
 [[exemptions.pkg-config]]
 version = "0.3.31"
 criteria = "safe-to-run"
 
 [[exemptions.proc-macro-crate]]
 version = "3.2.0"
-criteria = "safe-to-run"
-
-[[exemptions.proc-macro2]]
-version = "1.0.89"
-criteria = "safe-to-run"
-
-[[exemptions.quote]]
-version = "1.0.37"
-criteria = "safe-to-run"
-
-[[exemptions.regex]]
-version = "1.11.1"
-criteria = "safe-to-run"
-
-[[exemptions.regex-automata]]
-version = "0.4.8"
-criteria = "safe-to-run"
-
-[[exemptions.regex-syntax]]
-version = "0.8.5"
-criteria = "safe-to-run"
-
-[[exemptions.rustc_version]]
-version = "0.4.1"
-criteria = "safe-to-run"
-
-[[exemptions.semver]]
-version = "1.0.23"
 criteria = "safe-to-run"
 
 [[exemptions.serde]]
@@ -316,10 +243,6 @@ criteria = "safe-to-run"
 
 [[exemptions.serde_spanned]]
 version = "0.6.8"
-criteria = "safe-to-run"
-
-[[exemptions.shlex]]
-version = "1.3.0"
 criteria = "safe-to-run"
 
 [[exemptions.slab]]
@@ -346,28 +269,12 @@ criteria = "safe-to-run"
 version = "0.1.14"
 criteria = "safe-to-run"
 
-[[exemptions.toml]]
-version = "0.8.19"
-criteria = "safe-to-run"
-
-[[exemptions.toml_datetime]]
-version = "0.6.8"
-criteria = "safe-to-run"
-
 [[exemptions.toml_edit]]
 version = "0.22.22"
 criteria = "safe-to-run"
 
-[[exemptions.unicode-ident]]
-version = "1.0.13"
-criteria = "safe-to-run"
-
 [[exemptions.version-compare]]
 version = "0.2.0"
-criteria = "safe-to-run"
-
-[[exemptions.winapi]]
-version = "0.3.9"
 criteria = "safe-to-run"
 
 [[exemptions.winapi-i686-pc-windows-gnu]]
