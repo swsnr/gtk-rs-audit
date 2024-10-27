@@ -20,10 +20,6 @@ url = "https://raw.githubusercontent.com/mozilla/supply-chain/main/audits.toml"
 criteria = "safe-to-run"
 notes = "For desktop applications with little no to external exposure safe-to-run should usally be sufficient."
 
-[[exemptions.autocfg]]
-version = "1.4.0"
-criteria = "safe-to-run"
-
 [[exemptions.block]]
 version = "0.1.6"
 criteria = "safe-to-run"
@@ -166,14 +162,6 @@ criteria = "safe-to-run"
 suggest = false
 notes = "Do not audit gtk-rs itself, but just its dependencies"
 
-[[exemptions.hashbrown]]
-version = "0.15.0"
-criteria = "safe-to-run"
-
-[[exemptions.indexmap]]
-version = "2.6.0"
-criteria = "safe-to-run"
-
 [[exemptions.libadwaita]]
 version = "0.7.0"
 criteria = "safe-to-run"
@@ -192,10 +180,6 @@ criteria = "safe-to-run"
 
 [[exemptions.locale_config]]
 version = "0.3.0"
-criteria = "safe-to-run"
-
-[[exemptions.memchr]]
-version = "2.7.4"
 criteria = "safe-to-run"
 
 [[exemptions.memoffset]]
@@ -238,28 +222,8 @@ criteria = "safe-to-run"
 version = "3.2.0"
 criteria = "safe-to-run"
 
-[[exemptions.serde]]
-version = "1.0.213"
-criteria = "safe-to-run"
-
-[[exemptions.serde_derive]]
-version = "1.0.213"
-criteria = "safe-to-run"
-
-[[exemptions.serde_spanned]]
-version = "0.6.8"
-criteria = "safe-to-run"
-
-[[exemptions.slab]]
-version = "0.4.9"
-criteria = "safe-to-run"
-
 [[exemptions.smallvec]]
 version = "1.13.2"
-criteria = "safe-to-run"
-
-[[exemptions.syn]]
-version = "2.0.85"
 criteria = "safe-to-run"
 
 [[exemptions.system-deps]]
@@ -274,10 +238,6 @@ criteria = "safe-to-run"
 version = "0.1.14"
 criteria = "safe-to-run"
 
-[[exemptions.toml_edit]]
-version = "0.22.22"
-criteria = "safe-to-run"
-
 [[exemptions.version-compare]]
 version = "0.2.0"
 criteria = "safe-to-run"
@@ -290,27 +250,11 @@ criteria = "safe-to-run"
 version = "0.4.0"
 criteria = "safe-to-run"
 
-[[exemptions.windows-sys]]
-version = "0.52.0"
-criteria = "safe-to-run"
-
-[[exemptions.windows-targets]]
-version = "0.52.6"
-criteria = "safe-to-run"
-
-[[exemptions.windows_aarch64_gnullvm]]
-version = "0.52.6"
-criteria = "safe-to-run"
-
 [[exemptions.windows_aarch64_msvc]]
 version = "0.52.6"
 criteria = "safe-to-run"
 
 [[exemptions.windows_i686_gnu]]
-version = "0.52.6"
-criteria = "safe-to-run"
-
-[[exemptions.windows_i686_gnullvm]]
 version = "0.52.6"
 criteria = "safe-to-run"
 
@@ -322,14 +266,6 @@ criteria = "safe-to-run"
 version = "0.52.6"
 criteria = "safe-to-run"
 
-[[exemptions.windows_x86_64_gnullvm]]
-version = "0.52.6"
-criteria = "safe-to-run"
-
 [[exemptions.windows_x86_64_msvc]]
 version = "0.52.6"
-criteria = "safe-to-run"
-
-[[exemptions.winnow]]
-version = "0.6.20"
 criteria = "safe-to-run"

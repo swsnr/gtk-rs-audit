@@ -2,3 +2,115 @@
 # cargo-vet audits file
 
 [audits]
+
+[[trusted.autocfg]]
+criteria = "safe-to-run"
+user-id = 539 # Josh Stone (cuviper)
+start = "2019-05-22"
+end = "2025-10-27"
+notes = "Trusted by mozilla and bytecode-alliance"
+
+[[trusted.hashbrown]]
+criteria = "safe-to-run"
+user-id = 2915 # Amanieu d'Antras (Amanieu)
+start = "2019-04-02"
+end = "2025-10-27"
+notes = "Trusted by mozilla and bytecode-alliance"
+
+[[trusted.indexmap]]
+criteria = "safe-to-run"
+user-id = 539 # Josh Stone (cuviper)
+start = "2020-01-15"
+end = "2025-10-27"
+notes = "Trusted by mozilla and bytecode-alliance"
+
+[[trusted.memchr]]
+criteria = "safe-to-run"
+user-id = 189 # Andrew Gallant (BurntSushi)
+start = "2019-07-07"
+end = "2025-10-27"
+notes = "Trusted by mozilla and bytecode-alliance"
+
+[[trusted.serde]]
+criteria = "safe-to-run"
+user-id = 3618 # David Tolnay (dtolnay)
+start = "2019-03-01"
+end = "2025-10-27"
+notes = "Trusted by mozilla and bytecode-alliance"
+
+[[trusted.serde_derive]]
+criteria = "safe-to-run"
+user-id = 3618 # David Tolnay (dtolnay)
+start = "2019-03-01"
+end = "2025-10-27"
+notes = "Trusted by mozilla and bytecode-alliance"
+
+[[trusted.serde_spanned]]
+criteria = "safe-to-run"
+user-id = 6743 # Ed Page (epage)
+start = "2023-01-20"
+end = "2025-10-27"
+notes = "Trusted by mozilla and bytecode-alliance"
+
+[[trusted.slab]]
+criteria = "safe-to-run"
+user-id = 6741 # Alice Ryhl (Darksonn)
+start = "2021-10-13"
+end = "2025-10-27"
+notes = "Trusted by mozilla and bytecode-alliance"
+
+[[trusted.syn]]
+criteria = "safe-to-run"
+user-id = 3618 # David Tolnay (dtolnay)
+start = "2019-03-01"
+end = "2025-10-27"
+notes = "Trusted by mozilla and bytecode-alliance"
+
+[[trusted.toml_edit]]
+criteria = "safe-to-run"
+user-id = 6743 # Ed Page (epage)
+start = "2021-09-13"
+end = "2025-10-27"
+notes = "Trusted by mozilla and bytecode-alliance"
+
+[[trusted.windows-sys]]
+criteria = "safe-to-run"
+user-id = 64539 # Kenny Kerr (kennykerr)
+start = "2021-11-15"
+end = "2025-10-27"
+notes = "Trusted by mozilla and bytecode-alliance"
+
+[[trusted.windows-targets]]
+criteria = "safe-to-run"
+user-id = 64539 # Kenny Kerr (kennykerr)
+start = "2022-09-09"
+end = "2025-10-27"
+notes = "Trusted by mozilla and bytecode-alliance"
+
+[[trusted.windows_aarch64_gnullvm]]
+criteria = "safe-to-run"
+user-id = 64539 # Kenny Kerr (kennykerr)
+start = "2022-09-01"
+end = "2025-10-27"
+notes = "Trusted by mozilla and bytecode-alliance"
+
+[[trusted.windows_i686_gnullvm]]
+criteria = "safe-to-run"
+user-id = 64539 # Kenny Kerr (kennykerr)
+start = "2024-04-02"
+end = "2025-10-27"
+notes = "Trusted by mozilla and bytecode-alliance"
+
+[[trusted.windows_x86_64_gnullvm]]
+criteria = "safe-to-run"
+user-id = 64539 # Kenny Kerr (kennykerr)
+start = "2022-09-01"
+end = "2025-10-27"
+notes = "Trusted by mozilla and bytecode-alliance"
+
+[[trusted.winnow]]
+criteria = "safe-to-run"
+user-id = 6743 # Ed Page (epage)
+start = "2023-02-22"
+end = "2025-10-27"
+notes = "Trusted by mozilla and bytecode-alliance"
