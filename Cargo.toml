@@ -1,0 +1,12 @@
+[package]
+name = "gtk-rs-audit"
+description = "Demo repo for auditing the gtk-rs stack"
+version = "0.1.0"
+edition = "2021"
+license = "MPL-.2.0"
+publish = false
+
+[dependencies]
+adw = { version = "0.7.0", package = "libadwaita", features = ["v1_6"] }
+gettext = { version = "0.7.2", package = "gettext-rs", features = ["gettext-system"] }
+gtk = { version = "0.9.2", package = "gtk4", features = ["gnome_47"] }
