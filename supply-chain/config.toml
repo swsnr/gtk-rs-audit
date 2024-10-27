@@ -23,10 +23,14 @@ criteria = "safe-to-deploy"
 [[exemptions.cairo-rs]]
 version = "0.20.1"
 criteria = "safe-to-deploy"
+suggest = false
+notes = "Do not audit gtk-rs itself, but just its dependencies"
 
 [[exemptions.cairo-sys-rs]]
 version = "0.20.0"
 criteria = "safe-to-deploy"
+suggest = false
+notes = "Do not audit gtk-rs itself, but just its dependencies"
 
 [[exemptions.cc]]
 version = "1.1.31"
@@ -75,18 +79,26 @@ criteria = "safe-to-deploy"
 [[exemptions.gdk-pixbuf]]
 version = "0.20.4"
 criteria = "safe-to-deploy"
+suggest = false
+notes = "Do not audit gtk-rs itself, but just its dependencies"
 
 [[exemptions.gdk-pixbuf-sys]]
 version = "0.20.4"
 criteria = "safe-to-deploy"
+suggest = false
+notes = "Do not audit gtk-rs itself, but just its dependencies"
 
 [[exemptions.gdk4]]
 version = "0.9.2"
 criteria = "safe-to-deploy"
+suggest = false
+notes = "Do not audit gtk-rs itself, but just its dependencies"
 
 [[exemptions.gdk4-sys]]
 version = "0.9.2"
 criteria = "safe-to-deploy"
+suggest = false
+notes = "Do not audit gtk-rs itself, but just its dependencies"
 
 [[exemptions.gettext-rs]]
 version = "0.7.2"
@@ -99,54 +111,80 @@ criteria = "safe-to-deploy"
 [[exemptions.gio]]
 version = "0.20.4"
 criteria = "safe-to-deploy"
+suggest = false
+notes = "Do not audit gtk-rs itself, but just its dependencies"
 
 [[exemptions.gio-sys]]
 version = "0.20.4"
 criteria = "safe-to-deploy"
+suggest = false
+notes = "Do not audit gtk-rs itself, but just its dependencies"
 
 [[exemptions.glib]]
 version = "0.20.4"
 criteria = "safe-to-deploy"
+suggest = false
+notes = "Do not audit gtk-rs itself, but just its dependencies"
 
 [[exemptions.glib-macros]]
 version = "0.20.4"
 criteria = "safe-to-deploy"
+suggest = false
+notes = "Do not audit gtk-rs itself, but just its dependencies"
 
 [[exemptions.glib-sys]]
 version = "0.20.4"
 criteria = "safe-to-deploy"
+suggest = false
+notes = "Do not audit gtk-rs itself, but just its dependencies"
 
 [[exemptions.gobject-sys]]
 version = "0.20.4"
 criteria = "safe-to-deploy"
+suggest = false
+notes = "Do not audit gtk-rs itself, but just its dependencies"
 
 [[exemptions.graphene-rs]]
 version = "0.20.4"
 criteria = "safe-to-deploy"
+suggest = false
+notes = "Do not audit gtk-rs itself, but just its dependencies"
 
 [[exemptions.graphene-sys]]
 version = "0.20.4"
 criteria = "safe-to-deploy"
+suggest = false
+notes = "Do not audit gtk-rs itself, but just its dependencies"
 
 [[exemptions.gsk4]]
 version = "0.9.2"
 criteria = "safe-to-deploy"
+suggest = false
+notes = "Do not audit gtk-rs itself, but just its dependencies"
 
 [[exemptions.gsk4-sys]]
 version = "0.9.2"
 criteria = "safe-to-deploy"
+suggest = false
+notes = "Do not audit gtk-rs itself, but just its dependencies"
 
 [[exemptions.gtk4]]
 version = "0.9.2"
 criteria = "safe-to-deploy"
+suggest = false
+notes = "Do not audit gtk-rs itself, but just its dependencies"
 
 [[exemptions.gtk4-macros]]
 version = "0.9.1"
 criteria = "safe-to-deploy"
+suggest = false
+notes = "Do not audit gtk-rs itself, but just its dependencies"
 
 [[exemptions.gtk4-sys]]
 version = "0.9.2"
 criteria = "safe-to-deploy"
+suggest = false
+notes = "Do not audit gtk-rs itself, but just its dependencies"
 
 [[exemptions.hashbrown]]
 version = "0.15.0"
@@ -167,10 +205,14 @@ criteria = "safe-to-deploy"
 [[exemptions.libadwaita]]
 version = "0.7.0"
 criteria = "safe-to-deploy"
+suggest = false
+notes = "Do not audit gtk-rs itself, but just its dependencies"
 
 [[exemptions.libadwaita-sys]]
 version = "0.7.0"
 criteria = "safe-to-deploy"
+suggest = false
+notes = "Do not audit gtk-rs itself, but just its dependencies"
 
 [[exemptions.libc]]
 version = "0.2.161"
@@ -207,10 +249,14 @@ criteria = "safe-to-deploy"
 [[exemptions.pango]]
 version = "0.20.4"
 criteria = "safe-to-deploy"
+suggest = false
+notes = "Do not audit gtk-rs itself, but just its dependencies"
 
 [[exemptions.pango-sys]]
 version = "0.20.4"
 criteria = "safe-to-deploy"
+suggest = false
+notes = "Do not audit gtk-rs itself, but just its dependencies"
 
 [[exemptions.pin-project-lite]]
 version = "0.2.15"
