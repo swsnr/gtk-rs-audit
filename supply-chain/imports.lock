@@ -3,6 +3,8 @@
 
 [audits.bytecode-alliance.audits]
 
+[audits.embark-studios.audits]
+
 [[audits.google.audits.aho-corasick]]
 who = "Ying Hsu <yinghsu@chromium.org>"
 criteria = "safe-to-run"
